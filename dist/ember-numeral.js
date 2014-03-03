@@ -3,11 +3,19 @@ define("ember-numeral",
   function(__exports__) {
     "use strict";
     var priceFormat = function(priceInCents) {
-      return numeral(priceInCents / 100).format('$0,0.00');
+      if (priceInCents) {
+        return numeral(parseInt(priceInCents, 10) / 100).format('$0,0.00');
+      } else {
+        return null;
+      }
     };
 
     var numeralFormat = function(value, format) {
-      return numeral(value).format(format);
+      if (value) {
+        return numeral(value).format(format);
+      } else {
+        return null;
+      }
     };
 
     __exports__.priceFormat = priceFormat;

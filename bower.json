@@ -1,6 +1,6 @@
 {
   "name": "ember-numeral",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Handlebars helper for numeral.js.",
   "main": [ "main.js" ],
   "dependencies": {
