@@ -1,9 +1,14 @@
-define("ember-numeral", 
+define("ember-numeral",
   ["exports"],
   function(__exports__) {
     "use strict";
+    function isNumberLike(num) {
+      var type = Ember.typeOf(num);
+      return type === 'number' || type === 'string';
+    }
+
     var priceFormat = function(priceInCents) {
-      if (priceInCents) {
+      if (isNumberLike(priceInCents)) {
         return numeral(parseInt(priceInCents, 10) / 100).format('$0,0.00');
       } else {
         return null;
@@ -11,7 +16,7 @@ define("ember-numeral",
     };
 
     var numeralFormat = function(value, format) {
-      if (value) {
+      if (isNumberLike(value)) {
         return numeral(value).format(format);
       } else {
         return null;

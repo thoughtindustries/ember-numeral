@@ -1,8 +1,7 @@
 {
   "name": "ember-numeral",
   "description": "Handlebars helper for numeral.js.",
-  "version": "1.0.1",
-  "private": true,
+  "version": "1.0.2",
   "author": "Chris McC",
   "license": "MIT",
   "repository": {
